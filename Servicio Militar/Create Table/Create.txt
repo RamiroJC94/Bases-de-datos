@@ -1,0 +1,21 @@
+create table Soldados(
+    Cod.Soldado int unsigned not null auto_increment,
+    nombre varchar(15) not null,
+    apellido varchar(15) not null,
+    graduacion datetime,
+    Cod.Cuerpo1 int,
+    Cod.Cuartel2 int,
+    Num.Compania2 int,           
+    PRIMARY KEY (ID_Proyect),
+    FOREIGN KEY(Cod.Cuerpo1) REFERENCES CuerpoEjercito(Cod.Cuerpo), 
+    FOREIGN KEY(Cod.Cuartel2) REFERENCES Cuarteles(Cod.Cuartel), 
+    FOREIGN KEY(Num.Compania2) REFERENCES Compania(Num.Compania) 
+);
+
+create table Soldados(
+    Cod.Soldado int unsigned not null auto_increment,
+    nombre varchar(15) not null,
+    apellido varchar(15) not null,
+    graduacion datetime,    
+    PRIMARY KEY (ID_Proyect)
+);

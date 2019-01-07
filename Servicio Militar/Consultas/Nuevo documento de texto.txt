@@ -1,0 +1,20 @@
+select * from 
+
+
+
+ACTOR 	ACTOR_ID
+FILM 	FILM_ID
+
+FILM_ACTOR	ACTOR_ID	FILM_ID
+
+
+
+use sakila;
+
+select f.film_id, a.first_name, f.title, f.description
+from actor a, film f, film_actor d
+where d.actor_id = a.actor_id and d.film_id = f.film_id;
+
+select * from actor;
+select * from film;
+select * from film_actor;
